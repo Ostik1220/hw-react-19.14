@@ -1,4 +1,4 @@
-import { Component } from "react";
+// import { Component } from "react";
 import styled from "styled-components";
 
 const ModalBackdrop = styled.div`
@@ -14,21 +14,35 @@ const ModalBackdrop = styled.div`
     z-index: 1000;
 `;
 
-class Modal extends Component {
-  render() {
-    const { largeImageURL, tags, onClose } = this.props;
-
-    return (
-        <ModalBackdrop onClick={onClose}>
-        <div
-          className="modal-content"
-          onClick={e => e.stopPropagation()}
-        >
-          <img src={largeImageURL} alt={tags} />
-        </div>
-        </ModalBackdrop>
-    );
-  }
-}
-
+const Modal = ({ largeImageURL, tags, onClose }) => {
+  return (
+    <ModalBackdrop onClick={onClose}>
+      <div
+        className="modal-content"
+        onClick={e => e.stopPropagation()}
+      >
+        <img src={largeImageURL} alt={tags} />    
+      </div>
+    </ModalBackdrop>
+  );
+};
 export default Modal;
+
+// class Modal extends Component {
+//   render() {
+//     const { largeImageURL, tags, onClose } = this.props;
+
+//     return (
+//         <ModalBackdrop onClick={onClose}>
+//         <div
+//           className="modal-content"
+//           onClick={e => e.stopPropagation()}
+//         >
+//           <img src={largeImageURL} alt={tags} />
+//         </div>
+//         </ModalBackdrop>
+//     );
+//   }
+// }
+
+// export default Modal;
