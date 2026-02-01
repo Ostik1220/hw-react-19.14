@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/hw-react-19.14/static/css/main.f855e6bc.css",
-    "main.js": "/hw-react-19.14/static/js/main.0f89db4f.js",
+    "main.css": "/hw-react-19.14/static/css/main.80faea76.css",
+    "main.js": "/hw-react-19.14/static/js/main.2f33ed76.js",
+    "static/media/dvdify-animation-1765035886000.gif": "/hw-react-19.14/static/media/dvdify-animation-1765035886000.ba820ca61ec774c7e68c.gif",
     "index.html": "/hw-react-19.14/index.html",
-    "main.f855e6bc.css.map": "/hw-react-19.14/static/css/main.f855e6bc.css.map",
-    "main.0f89db4f.js.map": "/hw-react-19.14/static/js/main.0f89db4f.js.map"
+    "main.80faea76.css.map": "/hw-react-19.14/static/css/main.80faea76.css.map",
+    "main.2f33ed76.js.map": "/hw-react-19.14/static/js/main.2f33ed76.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.0f89db4f.js"
+    "static/css/main.80faea76.css",
+    "static/js/main.2f33ed76.js"
   ]
 }
