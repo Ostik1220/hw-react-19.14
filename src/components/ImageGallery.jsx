@@ -72,7 +72,7 @@ useEffect(() => {
           />
         </Gallery>
 
-                  {gifs.length > 0 && (
+                  {gifs.length > 10 && (
             <Button onClick={loadMore} />
           )}
         {showModal && (

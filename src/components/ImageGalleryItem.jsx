@@ -1,4 +1,5 @@
 // import { Component } from "react";
+import { useMemo } from "react";
 import styled from "styled-components";
 
 const ItemStyle = styled.li`
@@ -8,22 +9,20 @@ const ItemStyle = styled.li`
 `;
 
 const ImageGalleryItem = ({ items, onImageClick }) => {
-  return (
-    <>
-      {items.map(item => (
-          <ItemStyle key={item.id}>
-          <img
-            src={item.webformatURL}
-            alt={item.tags}
-            className="gallery-image"
-            onClick={() =>
-              onImageClick(item.largeImageURL, item.tags)
-            }
-          />  
-          </ItemStyle>
-      ))}
-    </>
-  );
+  const renderedItems = useMemo(() => items.map(item => (
+    <ItemStyle key={item.id}>
+      <img
+        src={item.webformatURL}
+        alt={item.tags}
+        className="gallery-image"
+        onClick={() =>
+          onImageClick(item.largeImageURL, item.tags)
+        }
+      />
+    </ItemStyle>
+  )), [items, onImageClick]);
+
+  return <>{renderedItems}</>;
 }
 
 export default ImageGalleryItem;
